@@ -1,0 +1,35 @@
+{
+  "name": "challenges",
+  "version": "0.1.0",
+  "description": "completed leetcode challenges",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "sirgallo",
+  "keywords": [],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=8",
+    "bun": ">=1"
+  },
+  "scripts": {
+    "build:cli": "tsc -p ./tsconfig.json",
+    "package:cli": "pnpm exec rollup --config rollup.config.mjs",
+    "test:runner": "bun run runner.ts",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@types/lodash": "^4.17.13",
+    "@types/node": "^22.9.3",
+    "esbuild": "^0.24.0",
+    "prettier": "^3.3.3",
+    "rollup": "^4.28.1",
+    "typescript": "~5.6.3"
+  }
+}
