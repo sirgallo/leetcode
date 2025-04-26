@@ -32,6 +32,8 @@ or just take log2 --> log2(240,000) is 18
 
 so in general, binary search has a runtime complexity of log2(n) to run in worst case.
 
+so Big O of of binary search is logN
+
 **NOTE**
 
 Binary search REQUIRES the list to be in sorted order to work properly.
