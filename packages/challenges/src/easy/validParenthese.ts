@@ -1,7 +1,7 @@
 const mirrorBracket: { [s: string]: string } = {
   ']': '[',
   '}': '{',
-  ')': '('
+  ')': '(',
 }
 
 const isValid = (s: string): boolean => {

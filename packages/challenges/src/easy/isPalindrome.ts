@@ -1,6 +1,6 @@
 export const isPalindrome = (num: number): boolean => {
   if (num < 0) return false // neg numbers cannot be palindromes
-  
+
   const original = num
   let reversed = 0
 

@@ -5,15 +5,15 @@ const rToInt: { [k: string]: number } = {
   L: 50,
   C: 100,
   D: 500,
-  M: 1000
+  M: 1000,
 }
 
 const romanToInt = (s: string): number => {
   let sum = 0
   let index = 0
   while (index < s.length) {
-    if (index < s.length - 1 && rToInt[s[index]] < rToInt[s[index+1]]) {
-      sum += rToInt[s[index+1]] - rToInt[s[index]]
+    if (index < s.length - 1 && rToInt[s[index]] < rToInt[s[index + 1]]) {
+      sum += rToInt[s[index + 1]] - rToInt[s[index]]
       index += 2
     } else {
       sum += rToInt[s[index]]
