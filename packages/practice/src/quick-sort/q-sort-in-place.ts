@@ -19,7 +19,6 @@ const partition = (list: number[], low: number, high: number): number => {
 
 const randomPartition = (list: number[], low: number, high: number): number => {
   const randomIdx = Math.floor(Math.random() * (high - low + 1)) + low; // need this semicolon
-  
   [list[randomIdx], list[high]] = [list[high], list[randomIdx]]
   return partition(list, low, high)
 }
