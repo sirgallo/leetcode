@@ -14,7 +14,7 @@ const romanToInt = (s: string): number => {
   while (index < s.length) {
     if (index < s.length - 1 && rToInt[s[index]] < rToInt[s[index+1]]) {
       sum += rToInt[s[index+1]] - rToInt[s[index]]
-      index = index + 2
+      index += 2
     } else {
       sum += rToInt[s[index]]
       index++
