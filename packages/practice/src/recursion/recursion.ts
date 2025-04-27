@@ -14,6 +14,8 @@ export const lookForKeyRecursive = (box: Box): string | undefined => {
     const found = lookForKeyRecursive(item)
     if (found !== undefined) return found
   }
+
+  return undefined
 }
 
 const box: Box = {
