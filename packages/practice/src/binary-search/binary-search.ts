@@ -8,7 +8,8 @@ export const binarySearch = (list: number[], item: number): number | undefined =
     let guess = list[mid]
 
     if (guess === item) return mid // if guess is item, return it
-    if (guess > item) high = mid - 1 // if guess is too high, high is now mid - 1
+    if (guess > item)
+      high = mid - 1 // if guess is too high, high is now mid - 1
     else low = mid + 1 // if guess is too low, low is now mid + 1
   }
 

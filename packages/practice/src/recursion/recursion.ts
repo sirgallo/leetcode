@@ -10,7 +10,7 @@ interface Box {
 export const lookForKeyRecursive = (box: Box): string | undefined => {
   for (const item of box.items) {
     if (typeof item === 'string') return item
-  
+
     const found = lookForKeyRecursive(item)
     if (found !== undefined) return found
   }
@@ -21,23 +21,15 @@ export const lookForKeyRecursive = (box: Box): string | undefined => {
 const box: Box = {
   items: [
     {
-      items: [
-        { items: [] },
-        { items: [] }
-      ]
+      items: [{ items: [] }, { items: [] }],
     },
     {
-      items: [
-        { items: [] },
-        'this is the string'
-      ]
+      items: [{ items: [] }, 'this is the string'],
     },
     {
-      items: [
-        { items: [] }
-      ]
-    }
-  ]
+      items: [{ items: [] }],
+    },
+  ],
 }
 
 console.log(lookForKeyRecursive(box))

@@ -2,7 +2,7 @@ export const binarySearch = (
   list: number[],
   item: number,
   low = 0,
-  high = list.length - 1
+  high = list.length - 1,
 ): number | undefined => {
   if (low > high) return undefined
 

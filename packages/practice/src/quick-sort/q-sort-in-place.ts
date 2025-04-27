@@ -8,18 +8,18 @@ const partition = (list: number[], low: number, high: number): number => {
 
   for (let j = low; j < high; j++) {
     if (list[j] < pivot) {
-      [list[i], list[j]] = [list[j], list[i]] // swap the elements
+      ;[list[i], list[j]] = [list[j], list[i]] // swap the elements
       i++
     }
   }
 
-  [list[i], list[high]] = [list[high], list[i]]
+  ;[list[i], list[high]] = [list[high], list[i]]
   return i
 }
 
 const randomPartition = (list: number[], low: number, high: number): number => {
-  const randomIdx = Math.floor(Math.random() * (high - low + 1)) + low; // need this semicolon
-  [list[randomIdx], list[high]] = [list[high], list[randomIdx]]
+  const randomIdx = Math.floor(Math.random() * (high - low + 1)) + low
+  ;[list[randomIdx], list[high]] = [list[high], list[randomIdx]]
   return partition(list, low, high)
 }
 
