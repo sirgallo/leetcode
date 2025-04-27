@@ -51,3 +51,12 @@ quicksort is a divide and conquer algorithm.
 base case:
 empty array or array with one element
 
+algorithm:
+```
+  1. randomly select a pivot between low and high index
+  2. sort the list into left and right between the pivot
+    -- if the element is lower than the pivot, push left
+    -- if the element is higher than the pivot, push right
+
+  3. repeat quickSort for left and right, returning left + pivot + right
+```
